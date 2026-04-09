@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureLens — See Your Future. Build It Today.</title>
+<meta name="description" content="AI-powered career planning for students. Get a personalized roadmap to your dream career based on your interests, budget, and goals.">
+<meta property="og:title" content="FutureLens — AI Career Planning for Students">
+<meta property="og:description" content="3 minutes. Your full career roadmap — skills, timeline, salary, and step-by-step actions.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>◎</text></svg>">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════ GLOBAL NAV ═══════════ -->
+<nav class="nav" id="main-nav">
+  <div class="nav-logo">Future<em>Lens</em></div>
+  <div class="nav-links">
+    <a class="nav-link" href="#features" onclick="scrollTo('features');return false;">How It Works</a>
+    <a class="nav-link" href="#stories" onclick="scrollTo('stories');return false;">Success Stories</a>
+    <a class="nav-link" href="/pricing">Pricing</a>
+  </div>
+  <button class="nav-cta" onclick="goTo('s-intro')">Start Free →</button>
+</nav>
+
+<!-- ═══════════════════════════════════
+     SCREEN 1: LANDING
+════════════════════════════════════ -->
+<div id="s-landing" class="screen active">
+
+  <!-- HERO -->
+  <section class="land-hero">
+    <div class="land-grid"></div>
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+    <div class="land-badge"><span class="badge-dot"></span>AI-Powered Career Intelligence</div>
+    <h1 class="land-headline">Future<em>Lens</em></h1>
+    <p class="land-tagline">See your future. Build it today.</p>
+    <div class="land-clock"><span class="tv" id="clock-time">--:--:--</span> &nbsp;·&nbsp; <span id="clock-date">---</span></div>
+    <div class="land-cta-row">
+      <button class="btn-hero" onclick="goTo('s-intro')">
+        Start Your Future Plan
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <button class="btn-ghost" onclick="scrollTo('features')">See How It Works</button>
+    </div>
+    <div class="land-stats">
+      <div class="land-stat"><div class="land-stat-n">12<em>k+</em></div><div class="land-stat-l">Futures Mapped</div></div>
+      <div class="land-stat"><div class="land-stat-n">94<em>%</em></div><div class="land-stat-l">Plan Accuracy</div></div>
+      <div class="land-stat"><div class="land-stat-n">180<em>+</em></div><div class="land-stat-l">Career Paths</div></div>
+      <div class="land-stat"><div class="land-stat-n">3<em>min</em></div><div class="land-stat-l">To Your Roadmap</div></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="lp-section" id="features">
+    <div class="section-eyebrow">What Makes FutureLens Different</div>
+    <h2 class="section-title">Built for students who are serious about their future</h2>
+    <p class="section-sub">Not generic career advice. A real, personalized plan built around who you are, what you can invest, and where you want to go.</p>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-icon">⚡</div><div class="feat-title">AI-Personalized Roadmap</div><div class="feat-desc">Our AI analyzes your unique combination of interests, budget, and goals to build a path that's specifically yours — not a template.</div></div>
+      <div class="feat-card"><div class="feat-icon">💸</div><div class="feat-title">Budget-Aware Planning</div><div class="feat-desc">Whether you have AED 50 or AED 5,000 per month, we build a plan that maximizes every dirham. Free resources always included.</div></div>
+      <div class="feat-card"><div class="feat-icon">📊</div><div class="feat-title">Salary Reality Check</div><div class="feat-desc">See realistic starting salaries, growth curves, and exactly how long it will take to reach your target income in the UAE market.</div></div>
+      <div class="feat-card"><div class="feat-icon">🧠</div><div class="feat-title">Skill Mastery Path</div><div class="feat-desc">Know exactly which 5 skills to focus on first, in what order, and how long each one takes. No guessing, no wasted time.</div></div>
+      <div class="feat-card"><div class="feat-icon">🚀</div><div class="feat-title">Step-by-Step Actions</div><div class="feat-desc">A 4-phase roadmap that breaks your entire journey into clear, achievable milestones — from day one to your first job offer.</div></div>
+      <div class="feat-card"><div class="feat-icon">🎯</div><div class="feat-title">Student-First Design</div><div class="feat-desc">Made for teenagers and young adults in education. We plan around your constraints, not over them.</div></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <div class="how-wrap" id="how">
+    <div>
+      <div class="section-eyebrow">The Process</div>
+      <h2 class="section-title" style="margin-bottom:36px;">From blank page to clear path in minutes</h2>
+      <div class="how-steps">
+        <div class="how-step active" onclick="setHowStep(0)"><div class="how-step-n">01</div><div><div class="how-step-title">Tell us who you are</div><div class="how-step-desc">Interests, education level, age, location, and what drives you.</div></div></div>
+        <div class="how-step" onclick="setHowStep(1)"><div class="how-step-n">02</div><div><div class="how-step-title">Define your ambition</div><div class="how-step-desc">Your target career and the salary you want to reach. Dream big.</div></div></div>
+        <div class="how-step" onclick="setHowStep(2)"><div class="how-step-n">03</div><div><div class="how-step-title">Set your constraints</div><div class="how-step-desc">Your monthly learning budget. What makes the plan actually actionable.</div></div></div>
+        <div class="how-step" onclick="setHowStep(3)"><div class="how-step-n">04</div><div><div class="how-step-title">Get your full plan</div><div class="how-step-desc">Skills, timeline, salary projections, resources, and step-by-step actions.</div></div></div>
+      </div>
+    </div>
+    <div class="how-preview">
+      <div class="how-preview-inner">
+        <div class="preview-card">
+          <div class="preview-label" id="prev-label">Your Interests</div>
+          <div class="preview-bar"><div class="preview-bar-fill" id="prev-bar"></div></div>
+          <div class="preview-chips" id="prev-chips"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testi-section" id="stories">
+    <div class="testi-inner">
+      <div class="section-eyebrow">Success Stories</div>
+      <h2 class="section-title">Students who built their future</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-quote">"I was completely lost about what to study after high school. FutureLens showed me a 2-year path to becoming a UX designer that fits my exact budget. I'm now in my second semester."</div>
+          <div class="testi-author"><div class="testi-avatar" style="background:rgba(201,168,76,.15);color:var(--gold)">SA</div><div><div class="testi-name">Sara Al-Mansoori</div><div class="testi-role">Design Student, Dubai</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-quote">"The roadmap was specific — it told me exactly which free courses to start with and what salary to expect in year one. That level of detail changed everything for me."</div>
+          <div class="testi-author"><div class="testi-avatar" style="background:rgba(91,155,213,.15);color:var(--blue)">KM</div><div><div class="testi-name">Khalid Mohammed</div><div class="testi-role">Junior Developer, Abu Dhabi</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-quote">"My parents thought gaming was just a hobby. FutureLens showed us a real career path in game design with a clear timeline and realistic salary numbers. Now they're fully on board."</div>
+          <div class="testi-author"><div class="testi-avatar" style="background:rgba(76,175,130,.15);color:var(--green)">RJ</div><div><div class="testi-name">Rania Jouni</div><div class="testi-role">Game Design Student, Sharjah</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="lp-section" id="about">
+    <div class="about-grid">
+      <div>
+        <div class="section-eyebrow">Our Mission</div>
+        <h2 class="section-title">Every student deserves a clear path</h2>
+        <p style="font-size:15px;color:var(--text2);line-height:1.82;margin-bottom:18px;">Too many talented young people in the UAE and MENA region make major career decisions without the right information — picking a major because a parent suggested it, or avoiding a career they love because they don't know how to get there.</p>
+        <p style="font-size:15px;color:var(--text2);line-height:1.82;">FutureLens exists to change that. We combine AI with real market data to give every student — regardless of their background or budget — career guidance previously reserved for expensive consultants.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card"><div class="about-card-v">100% Free</div><div class="about-card-l">No subscriptions, no paywalls. FutureLens is free to use.</div></div>
+        <div class="about-card"><div class="about-card-v" style="color:var(--gold)">Gemini AI</div><div class="about-card-l">Powered by Google Gemini — one of the world's leading AI models.</div></div>
+        <div class="about-card"><div class="about-card-v">UAE-First</div><div class="about-card-l">Built around UAE & MENA salaries, opportunities, and learning resources.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <div class="final-cta-bg"></div>
+    <div class="final-cta-inner">
+      <div class="final-cta-eyebrow">Your future starts here</div>
+      <h2 class="final-cta-title">Stop wondering.<br><em style="color:var(--gold);font-style:italic;">Start planning.</em></h2>
+      <p class="final-cta-sub">3 minutes. Your complete career roadmap.</p>
+      <button class="btn-hero" onclick="goTo('s-intro')">
+        Get My Free Career Plan
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Future<em>Lens</em></div>
+      <div class="footer-links">
+        <a class="footer-link" href="#features" onclick="scrollTo('features');return false;">How It Works</a>
+        <a class="footer-link" href="#stories" onclick="scrollTo('stories');return false;">Stories</a>
+        <a class="footer-link" href="/pricing">Pricing</a>
+        <span class="footer-link" onclick="goTo('s-intro')">Start Free</span>
+      </div>
+      <div class="footer-copy">© 2025 FutureLens. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 2: INTRO
+════════════════════════════════════ -->
+<div id="s-intro" class="screen">
+  <div class="ob-nav">
+    <div class="ob-logo">FL</div>
+    <div class="ob-step">Getting Started</div>
+    <span class="ob-exit" onclick="goTo('s-landing')">✕ Exit</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Welcome</div>
+    <h2 class="stage-title">Map your path to the future</h2>
+    <p class="stage-desc">We'll ask you 8 short questions to understand who you are, what you want, and what you have to work with. Then Gemini AI builds your complete career plan — personalized to you.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px;">
+      <div class="intro-card" style="display:flex;gap:16px;align-items:flex-start;padding:18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div><div style="font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;">Interests, Career & Motivation</div><div style="font-size:13px;color:var(--text2);">What excites you, where you want to go, and what drives you</div></div>
+      </div>
+      <div class="intro-card" style="display:flex;gap:16px;align-items:flex-start;padding:18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div><div style="font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;">Salary Target & Budget</div><div style="font-size:13px;color:var(--text2);">Your financial ambition and monthly learning investment</div></div>
+      </div>
+      <div class="intro-card" style="display:flex;gap:16px;align-items:flex-start;padding:18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div><div style="font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px;">AI Analysis & Full Roadmap</div><div style="font-size:13px;color:var(--text2);">Skills, timeline, salary projections, resources, quick wins</div></div>
+      </div>
+    </div>
+    <div style="padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:13px;color:var(--text2);line-height:1.7;">
+      <strong style="color:var(--text);font-weight:500;">Free &amp; Private.</strong> 100% free to use. Your answers are only used to generate your plan.
+    </div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-landing')">← Back</button>
+      <button class="btn-next" onclick="goTo('s-interests')">Let's Begin →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 3: INTERESTS
+════════════════════════════════════ -->
+<div id="s-interests" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 1 of 8 — Interests</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:22%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Discover yourself</div>
+    <h2 class="stage-title">What genuinely excites you?</h2>
+    <p class="stage-desc">Select everything that interests you — don't overthink it. Your natural curiosity is the best predictor of long-term success. Pick at least one.</p>
+    <div class="interest-grid">
+      <div class="int-card" onclick="toggleInterest(this,'Technology')"><span class="int-icon">⚡</span><div class="int-label">Technology</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Business')"><span class="int-icon">📈</span><div class="int-label">Business</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Design')"><span class="int-icon">🎨</span><div class="int-label">Design</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Engineering')"><span class="int-icon">⚙️</span><div class="int-label">Engineering</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Medicine')"><span class="int-icon">🩺</span><div class="int-label">Medicine</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Gaming')"><span class="int-icon">🎮</span><div class="int-label">Gaming</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Finance')"><span class="int-icon">💹</span><div class="int-label">Finance</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Art & Media')"><span class="int-icon">🎬</span><div class="int-label">Art & Media</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Science')"><span class="int-icon">🔬</span><div class="int-label">Science</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Education')"><span class="int-icon">📚</span><div class="int-label">Education</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Law')"><span class="int-icon">⚖️</span><div class="int-label">Law</div></div>
+      <div class="int-card" onclick="toggleInterest(this,'Marketing')"><span class="int-icon">📣</span><div class="int-label">Marketing</div></div>
+    </div>
+    <div class="err-msg" id="int-err">Please select at least one interest to continue.</div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-intro')">← Back</button>
+      <button class="btn-next" onclick="nextInterests()">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 4: CAREER
+════════════════════════════════════ -->
+<div id="s-career" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 2 of 8 — Career Goal</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:34%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Define your direction</div>
+    <h2 class="stage-title">What career do you want?</h2>
+    <p class="stage-desc">Be as specific or broad as you like. Type your goal or choose from smart suggestions based on your interests.</p>
+    <div class="field-group">
+      <label class="field-label">Your Target Career</label>
+      <input class="field-input" id="career-input" placeholder="e.g. Software Engineer, Game Designer, Doctor..." oninput="syncCareer(this.value)">
+      <div class="field-hint">Not sure yet? Pick one from below — you can always explore different paths.</div>
+    </div>
+    <div class="chips-label">Smart suggestions based on your interests</div>
+    <div class="chips-row" id="career-chips"></div>
+    <div class="err-msg" id="career-err">Please enter or select a career goal to continue.</div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-interests')">← Back</button>
+      <button class="btn-next" onclick="nextCareer()">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 5: SALARY
+════════════════════════════════════ -->
+<div id="s-salary" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 3 of 8 — Salary Target</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:46%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Think realistically</div>
+    <h2 class="stage-title">What's your target salary?</h2>
+    <p class="stage-desc">The range is automatically set based on your chosen career. Drag to your personal target.</p>
+    <div class="salary-display" id="salary-display">AED 12,000 <span class="salary-period">/ month</span></div>
+    <input type="range" class="range-input" id="salary-slider" min="4000" max="60000" step="500" value="12000" oninput="updateSalary(this.value)">
+    <div class="range-scale" id="salary-scale"><span>AED 4k</span><span>AED 32k</span><span>AED 60k</span></div>
+    <div class="salary-ctx">
+      <div class="salary-ctx-title" id="salary-ctx-title">Market Benchmarks for Your Career</div>
+      <div class="salary-ctx-row" id="salary-career-ctx">
+        <div class="sal-item"><div class="sal-v">AED 5k–9k</div><div class="sal-l">Entry Level</div></div>
+        <div class="sal-item"><div class="sal-v">AED 10k–20k</div><div class="sal-l">Mid Level</div></div>
+        <div class="sal-item"><div class="sal-v">AED 25k–50k+</div><div class="sal-l">Senior Level</div></div>
+      </div>
+    </div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-career')">← Back</button>
+      <button class="btn-next" onclick="nextSalary()">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 6: BUDGET & SITUATION
+════════════════════════════════════ -->
+<div id="s-budget" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 4 of 8 — Your Situation</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:57%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Know your reality</div>
+    <h2 class="stage-title">Tell us about your current situation</h2>
+    <p class="stage-desc">This is what makes your plan actually useful — not generic advice. Fill in as accurately as you can.</p>
+    <div class="twin-grid" style="margin-bottom:20px;">
+      <div class="field-group" style="margin-bottom:0;">
+        <label class="field-label">Monthly Learning Budget (AED)</label>
+        <input class="field-input" id="budget-input" type="number" placeholder="e.g. 300" min="0">
+        <div class="field-hint">For courses, books, subscriptions</div>
+      </div>
+      <div class="field-group" style="margin-bottom:0;">
+        <label class="field-label">Your Age</label>
+        <input class="field-input" id="age-input" type="number" placeholder="e.g. 17" min="12" max="30">
+        <div class="field-hint">Helps tailor your timeline</div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label">Country / Location</label>
+      <input class="field-input" id="country-input" placeholder="e.g. UAE, Saudi Arabia, Egypt..." value="UAE" oninput="onCountryChange(this.value)">
+      <div class="field-hint">We'll tailor salaries and resources to your market</div>
+    </div>
+    <div class="field-group" style="margin-bottom:0;">
+      <label class="field-label">Current Education Level</label>
+      <div class="select-grid two-col" id="edu-grid">
+        <div class="sel-card" onclick="selectEdu(this,'Middle School')"><div class="sel-radio"></div><div><div class="sel-title">Middle School</div><div class="sel-sub">Grade 6–9</div></div></div>
+        <div class="sel-card" onclick="selectEdu(this,'High School')"><div class="sel-radio"></div><div><div class="sel-title">High School</div><div class="sel-sub">Grade 10–12</div></div></div>
+        <div class="sel-card" onclick="selectEdu(this,'University')"><div class="sel-radio"></div><div><div class="sel-title">University</div><div class="sel-sub">Undergraduate / Graduate</div></div></div>
+        <div class="sel-card" onclick="selectEdu(this,'Self-Learning')"><div class="sel-radio"></div><div><div class="sel-title">Self-Learning</div><div class="sel-sub">Outside formal education</div></div></div>
+      </div>
+    </div>
+    <div class="err-msg" id="budget-err">Please fill in your budget, age, and select your education level.</div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-salary')">← Back</button>
+      <button class="btn-next" onclick="nextBudget()">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 7: SKILL LEVEL
+════════════════════════════════════ -->
+<div id="s-skill" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 5 of 8 — Skill Level</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:68%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Be honest with yourself</div>
+    <h2 class="stage-title">What's your current skill level?</h2>
+    <p class="stage-desc">In the field related to your target career — how would you describe where you are right now? Honesty gives you a more accurate plan.</p>
+    <div class="select-grid" id="skill-grid">
+      <div class="sel-card" onclick="selectSkill(this,'Beginner')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">Beginner</div><div class="sel-sub">Just starting out — little to no experience. Curious and ready to learn from scratch.</div></div>
+      </div>
+      <div class="sel-card" onclick="selectSkill(this,'Intermediate')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">Intermediate</div><div class="sel-sub">Some foundation — you've done courses, personal projects, or have basic practical knowledge.</div></div>
+      </div>
+      <div class="sel-card" onclick="selectSkill(this,'Advanced')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">Advanced</div><div class="sel-sub">Strong foundation — looking to specialize, level up, or transition within the field.</div></div>
+      </div>
+    </div>
+    <div class="err-msg" id="skill-err">Please select your current skill level to continue.</div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-budget')">← Back</button>
+      <button class="btn-next" onclick="nextSkill()">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 8: LEARNING STYLE (NEW)
+════════════════════════════════════ -->
+<div id="s-motivation" class="screen">
+  <div class="ob-nav"><div class="ob-logo">FL</div><div class="ob-step">Step 6 of 8 — What Drives You</div><span class="ob-exit" onclick="goTo('s-landing')">✕</span></div>
+  <div class="progress-track"><div class="progress-fill" style="width:80%"></div></div>
+  <div class="ob-shell">
+    <div class="stage-eyebrow">Personalize your plan</div>
+    <h2 class="stage-title">What motivates you most about this career?</h2>
+    <p class="stage-desc">This helps us shape the tone and focus of your roadmap — whether you're driven by income, impact, creativity, or prestige. There's no wrong answer.</p>
+    <div class="select-grid" id="motiv-grid">
+      <div class="sel-card" onclick="selectMotiv(this,'Financial independence and a high income')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">💰 Financial Freedom</div><div class="sel-sub">Building wealth and achieving financial independence as fast as possible</div></div>
+      </div>
+      <div class="sel-card" onclick="selectMotiv(this,'Making a real impact and helping others')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">🌍 Making an Impact</div><div class="sel-sub">Doing work that matters and genuinely improves people's lives</div></div>
+      </div>
+      <div class="sel-card" onclick="selectMotiv(this,'Creative expression and building things')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">🎨 Creative Expression</div><div class="sel-sub">Creating, designing, and building things that didn't exist before</div></div>
+      </div>
+      <div class="sel-card" onclick="selectMotiv(this,'Mastery, growth, and becoming the best in the field')">
+        <div class="sel-radio"></div>
+        <div><div class="sel-title">🏆 Mastery & Prestige</div><div class="sel-sub">Becoming an expert, earning respect, and being recognized in the field</div></div>
+      </div>
+    </div>
+    <div class="err-msg" id="motiv-err">Please select what motivates you most to continue.</div>
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo('s-skill')">← Back</button>
+      <button class="btn-next" onclick="nextMotivation()">Analyze My Future →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN: CAREER PICKER (after loading)
+════════════════════════════════════ -->
+<div id="s-picker" class="screen">
+  <div class="ob-nav">
+    <div class="ob-logo">FL</div>
+    <div class="ob-step">Choose Your Path</div>
+    <span class="ob-exit" onclick="restart()">✕</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" style="width:95%"></div></div>
+  <div class="ob-shell" style="max-width:780px;">
+    <div class="stage-eyebrow">One last step</div>
+    <h2 class="stage-title">We found 3 paths for you.</h2>
+    <p class="stage-desc">Based on your interests and goals, here are three career directions. Pick the one that resonates most — we'll build your full personalized plan instantly.</p>
+    <div id="picker-cards" style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+      <!-- injected by JS -->
+    </div>
+    <div id="picker-err" class="err-msg">Please select a career path to continue.</div>
+    <div id="picker-loading" style="display:none;text-align:center;padding:24px;color:var(--text3);font-size:14px;">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:8px;">BUILDING YOUR PLAN</div>
+      Generating your personalized roadmap...
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 9: LOADING
+════════════════════════════════════ -->
+<div id="s-loading" class="screen">
+  <div class="load-wrap">
+    <div class="load-ring-outer">
+      <div class="load-ring"><div class="load-emblem">FL</div></div>
+    </div>
+    <div>
+      <div class="load-title">Analyzing Your Future</div>
+      <div class="load-sub">Building your personalized roadmap...</div>
+    </div>
+    <div class="load-steps">
+      <div class="load-step active" id="ls1"><div class="load-step-icon">◈</div>Processing your interests &amp; goals</div>
+      <div class="load-step" id="ls2"><div class="load-step-icon">◈</div>Matching career trajectories</div>
+      <div class="load-step" id="ls3"><div class="load-step-icon">◈</div>Calculating learning investment</div>
+      <div class="load-step" id="ls4"><div class="load-step-icon">◈</div>Mapping your skill roadmap</div>
+      <div class="load-step" id="ls5"><div class="load-step-icon">◈</div>Finalizing your action plan</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SCREEN 10: RESULTS
+════════════════════════════════════ -->
+<div id="s-results" class="screen">
+  <div class="res-header">
+    <div class="res-header-bg"></div>
+    <div class="res-header-inner">
+      <div>
+        <div class="res-eyebrow">Your Personalized Career Plan</div>
+        <div class="res-title" id="res-title">—</div>
+        <div class="res-headline" id="res-headline">—</div>
+        <div class="res-tags" id="res-tags"></div>
+      </div>
+      <svg class="score-ring" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(240,237,230,0.07)" stroke-width="2"/>
+        <circle cx="50" cy="50" r="44" fill="none" stroke="#C9A84C" stroke-width="2"
+          stroke-dasharray="276.5" stroke-dashoffset="276.5" stroke-linecap="round"
+          transform="rotate(-90 50 50)" id="score-circle"
+          style="transition:stroke-dashoffset 1.5s cubic-bezier(.4,0,.2,1) .4s"/>
+        <text x="50" y="46" text-anchor="middle" font-family="'Playfair Display',serif" font-size="20" font-weight="700" fill="#F0EDE6" id="score-num">—</text>
+        <text x="50" y="60" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="8" fill="#52504A" letter-spacing="1.5">READINESS</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="res-body" id="results-body">
+    <div class="res-loading">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;margin-bottom:8px;color:var(--gold);">BUILDING YOUR PLAN</div>
+      Generating your personalized roadmap...
+    </div>
+  </div>
+
+  <div class="res-actions" id="res-actions" style="display:none;">
+    <button class="btn-save" onclick="window.print()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Save My Plan
+    </button>
+    <button class="btn-restart" onclick="restart()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.45"/></svg>
+      Start Over
+    </button>
+    <a href="/pricing" style="margin-left:auto;text-decoration:none;padding:13px 22px;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--gold);border-radius:4px;font-size:13px;font-weight:600;">
+      Pricing →
+    </a>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>
